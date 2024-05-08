@@ -21,19 +21,16 @@ while(opcion != 3){
     double monto = 0;
 
     System.out.println("""
-            *******************************
+            \n*******************************
             BIENVENIDO AL CONVERSOR DE MONEDAS v1.5
-            Github: 
-            Linkedin: https://www.linkedin.com/in/ezequiel-sanchez-4b8a062a7/
-            
-            
-            EXAMPLE 
+ 
             1) CONVERSAR MONEDA
             3) SALIR
+            *******************************
             """);
     opcion = scanner.nextInt();
 if(opcion == 3){
-    System.out.println("GRACIAS POR USAR MI APLICION");
+    System.out.println("GRACIAS POR USAR MI APLICION \nGithub: https://github.com/Chequel197/Challenges_Conversor_Moneda.git\n" + "Linkedin: https://www.linkedin.com/in/ezequiel-sanchez-4b8a062a7/\n");
     break;
 }
     switch (opcion){
@@ -98,7 +95,7 @@ if(opcion == 3){
         //De la conversion de la moneda directamente de la consulta de la API
         double Respuesta = jsonObject.get("conversion_result").getAsDouble();
 
-        System.out.println("El resultado es de convertir "+monto+" "+ Moneda1 + " es "+ +Math.round(Respuesta*100.0)/100.0 + " "+Moneda2) ;
+        System.out.println("\n El resultado es de convertir "+monto+" "+ Moneda1 + " es "+ +Math.round(Respuesta*100.0)/100.0 + " "+Moneda2) ;
 
 
     } catch (NumberFormatException e){
